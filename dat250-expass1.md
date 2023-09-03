@@ -1,5 +1,6 @@
 # Hand-in: Short report
 The URL to the published container on DockerHub: https://hub.docker.com/repository/docker/sunnivasl/dat250/general 
+The URL to my GitHub repository for this project: https://github.com/h591296/DAT250_Assignment_1.git 
 
 ## Technical problems during installation of the software development environment and solutions
 #### Installing Java
