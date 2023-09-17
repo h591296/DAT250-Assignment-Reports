@@ -36,7 +36,7 @@ To answer the question: “Where do the getter/setter used in setUp() method com
 # Experiment 2: Banking/Credit Card example JPA
 
 ### URL to my code for experiment 2:
-https://github.com/h591296/DAT250-Assignment-Reports.git
+https://github.com/h591296/DAT250-JPA-Tutorial.git
 
 ### Technical challenges I encountered and how I tried to resolve them
 
