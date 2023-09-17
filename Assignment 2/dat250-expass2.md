@@ -1,11 +1,6 @@
-#### URL to my code for experiment 2:
-https://github.com/h591296/DAT250-Assignment-Reports.git
-
-
 # Experiment 1: JPA tutorial
 
-## Following the JPA tutorial
-
+### Following the JPA tutorial
 1. The class ****Main**** ran and terminated without errors.
 2. The package relationshipexample was successfully created under no.hvl.dat250.jpa.tutorial
 3. The three classes Family, Job, and Person was successfully added to the new package I just made.
@@ -40,7 +35,10 @@ To answer the question: “Where do the getter/setter used in setUp() method com
 
 # Experiment 2: Banking/Credit Card example JPA
 
-#### Technical challenges I encountered and how I tried to resolve them
+### URL to my code for experiment 2:
+https://github.com/h591296/DAT250-Assignment-Reports.git
+
+### Technical challenges I encountered and how I tried to resolve them
 
 I started implementing the domain model by establishing the essential class variables, such as "id" and "name" within the 'Customer' class. Subsequently, I proceeded to establish the associations between the various classes involved. I began on the associations between the 'Bank' and 'CreditCard' classes, as well as the 'CreditCard' and 'Pincode' classes. I considered these associations to be the most straightforward to begin with. When I moved on to the many-to-many associations, I spent a lot of time trying to get these relationships right.
 
@@ -65,3 +63,9 @@ Due to these technical issues, I cannot answer the specific questions given in t
 I also tried seeking help on Discord, but I noticed that the teaching assistants were not clearly identified among the chat members. I was hoping that a teacher assistant could help me with my questions or review my code for some guidance. Unfortunately, this did not happen.
 
 Due to the fact that I had work commitments on both Friday and Saturday, I could not use any additional time to work on this assignment. By this point, I had invested a significant amount of time troubleshooting my code, and I ultimately concluded that I had already dedicated enough time to figure out the issues with my project.
+
+### Pending issues with this assignment that I did not manage to solve
+The most significant issues with this assignment are:
+1. Test errors: In the beginning I managed to get the tests right even though the main-method did not run without errors. After I tried the @Getter and @Setter from Lombok, the tests did no longer run correctly. Even though I changed it back, the tests did not run without errors. 
+2. Main method errors: The primary method consistently encountered errors and did not run correctly, even after extensive trubleshooting.
+3. Database Inspection: Due to the main method errors, inspecting the database and confirming the correct setup of tables was not possible. 
