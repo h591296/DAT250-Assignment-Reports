@@ -10,12 +10,11 @@ To me it also was not clear how I should do the tutorials for the CRUD operation
 
 The image below shows how we were supposed to verify the installation package:
 
-![InstructionsVerifyInstallation](Installation:%20MongoDB%20Database%20images/InstructionsVerifyInstallation.png)
+![InstructionsVerifyInstallation](Installation-MongoDB/InstructionsVerifyInstallation.png)
 
 This screenshot displays the correct checksum, based on the instructions:
 
-![VerifyInstallation](Installation:%20MongoDB%20Database%20images/VerifyInstallation.png)
-
+![VerifyInstallation](Installation-MongoDB/VerifyInstallation.png)
 
 ## Experiment 1 Relevant results
 
@@ -23,14 +22,14 @@ This screenshot displays the correct checksum, based on the instructions:
 
 The following code showcases all documents in the inventory collection.
 
-![InsertDocumentsInventory](Experiment%201:%20CRUD%20images/InsertDocumentsInventory.png)
+![InsertDocumentsInventory](Experiment1-CRUD/InsertDocumentsInventory.png)
 
 The `canvas` document was added using the `db.collection.insertOne()` operation.
 The `journal`, `mat`, and `mousepad` document eas added using the `db.collection.insertMany()` operation.
 
 An example of the insert operation, here `db.collection.insertMany()` is displayed below:
 
-![InsertInventoryInsertMany](Experiment%201:%20CRUD%20images/InsertInventoryInsertMany.png)
+![InsertInventoryInsertMany](Experiment1-CRUD/InsertInventoryInsertMany.png)
 
 I ended up changing the name of this collection to `inventory_insertDoc`, and will use the same type of naming convention for all examples of the CRUD operations (insert, query, update, remove, bulk-write). That way I learned that MongoDB collections cannot be directly renamed using a built-in command. So in my case I did the following:
 
@@ -39,73 +38,72 @@ I ended up changing the name of this collection to `inventory_insertDoc`, and wi
 - Then I verified that the new collection contained all of the documents by using the find() operation.
 - After I had verified that the data had been successfully transferred to the new collection, I could drop the old collection.
 
-![InsertInventoryReplaced](Experiment%201:%20CRUD%20images/InsertInventoryReplaced.png)
+![InsertInventoryReplaced](Experiment1-CRUD/InsertInventoryReplaced.png)
 
 ### Query Documents
 
 **Specify the `Equality` condition**
 
-![QueryEqualityCondition](Experiment%201:%20CRUD%20images/QueryEqualityCondition.png)
+![QueryEqualityCondition](Experiment1-CRUD/QueryEqualityCondition.png)
 
 **Specify conditions using `Query operators`**
 
-![QueryOperationsSpecifyConditions](Experiment%201:%20CRUD%20images/QueryOperationsSpecifyConditions.png)
+![QueryOperationsSpecifyConditions](Experiment1-CRUD/QueryOperationsSpecifyConditions.png)
 
 **Specify `And` operations**
 
-![QueryAndConditions](Experiment%201:%20CRUD%20images/QueryAndConditions.png)
+![QueryAndConditions](Experiment1-CRUD/QueryAndConditions.png)
 
 **Specify `Or` conditions**
 ($lt means less than)
 
-![QueryOrConditions](Experiment%201:%20CRUD%20images/QueryOrConditions.png)
+![QueryOrConditions](Experiment1-CRUD/QueryOrConditions.png)
 
 **Specify `And` as well as `Or` conditions**
 (item: /^p/ means item that starts with the character p)
 
-![QueryAndOrConditions](Experiment%201:%20CRUD%20images/QueryAndOrConditions.png)
+![QueryAndOrConditions](Experiment1-CRUD/QueryAndOrConditions.png)
 
 ### Update Documents
 
 **Update a single document**
 
-![UpdateSingleDocument](Experiment%201:%20CRUD%20images/UpdateSingleDocument.png)
+![UpdateSingleDocument](Experiment1-CRUD/UpdateSingleDocument.png)
 
 - the `$set` operator updates the value of the `size.uom` field to `"cm"` and the value of the status field to `"P"`.
 - the `$currentDate` operator updates the value of the `lastModified` field to the current date. If the `lastModified` field does not exist, `$currentDate` will create the field.
 
 **Update many documents**
 
-![UpdateManyDocuments](Experiment%201:%20CRUD%20images/UpdateManyDocuments.png)
+![UpdateManyDocuments](Experiment1-CRUD/UpdateManyDocuments.png)
 
 - the `$set` operator updates the value of the `size.uom` field to `"in"` and the value of the status field to `"P"`.
 - the `$currentDate` operator updates the value of the `lastModified` field to the current date. If the `lastModified` field does not exist, `$currentDate` will create the field.
 
 **Replace one**
 
-![UpdateReplaceOne](Experiment%201:%20CRUD%20images/UpdateReplaceOne.png)
-
+![UpdateReplaceOne](Experiment1-CRUD/UpdateReplaceOne.png)
 Check to see that the paper actually was replaced:
 
-![UpdateVerifyReplaceOne](Experiment%201:%20CRUD%20images/UpdateVerifyReplaceOne.png)
+![UpdateVerifyReplaceOne](Experiment1-CRUD/UpdateVerifyReplaceOne.png)
 
 ### Remove Documents
 
 **Delete all documents matching a deleting criteria**
 
-![RemoveDocumentsMatchingCriteria](Experiment%201:%20CRUD%20images/RemoveDocumentsMatchingCriteria.png)
+![RemoveDocumentsMatchingCriteria](Experiment1-CRUD/RemoveDocumentsMatchingCriteria.png)
 
 **Delete at most a single document that matches a deleting criteria**
 
-![RemoveAtMostASingleDocument](Experiment%201:%20CRUD%20images/RemoveAtMostASingleDocument.png)
+![RemoveAtMostASingleDocument](Experiment1-CRUD/RemoveAtMostASingleDocument.png)
 
 **Delete all documents**
 
-![RemoveAllDocuments](Experiment%201:%20CRUD%20images/RemoveAllDocuments.png)
+![RemoveAllDocuments](Experiment1-CRUD/RemoveAllDocuments.png)
 
 ### Bulk-Write operations
 
-![BulkWriteOperations](Experiment%201:%20CRUD%20images/BulkWriteOperations.png)
+![BulkWriteOperations](Experiment1-CRUD/BulkWriteOperations.png)
 
 - Adds two documents using `insertOne`.
 - Updates a document using `updateOne`.
@@ -120,41 +118,40 @@ Perform the map-reduce operation on the `orders_mapReduce` collection to group b
 
 1. Define the map function to process each input document:
 
-![AggregationMapFunction1](Experiment%202:%20Aggregation%20images/AggregationMapFunction1.png)
+![AggregationMapFunction1](Experiment2-Aggregation/AggregationMapFunction1.png)
 
-2. Define the corresponding reduce function with two arguments `keyCustId` and `valuesPrices`:
+1. Define the corresponding reduce function with two arguments `keyCustId` and `valuesPrices`:
 
-![AggregationReduceFunction1](Experiment%202:%20Aggregation%20images/AggregationMapFunction1.png)
+![AggregationReduceFunction1](Experiment2-Aggregation/AggregationReduceFunction1.png)
 
-3. Perform Map-reduce on all documents in the `orders_mapReduce` collection using the `mapFunction1` map function and the `reduceFunction1` reduce function:
+1. Perform Map-reduce on all documents in the `orders_mapReduce` collection using the `mapFunction1` map function and the `reduceFunction1` reduce function:
 
-![AggregationOrdersMapReduce](Experiment%202:%20Aggregation%20images/AggregationOrdersMapReduce.png)
+![AggregationOrdersMapReduce](Experiment2-Aggregation/AggregationOrdersMapReduce.png)
 
 This operation should output the results to a collection named `map_reduce_example`. If the `map_reduce_example` collection already exists, the operation will replace the contents with the results of this map-reduce operation.
 
 In my case, I got the message that the `Collection.mapReduce()` method is deprecated in MongoDb, and it suggests using aggregation instead.
 
-4. I was still able to query the `map_reduce_example` collection to verify the results, as the operation returned these documents: 
+1. I was still able to query the `map_reduce_example` collection to verify the results, as the operation returned these documents: 
 
-![AggregationVerifyOrdersMapReduce](Experiment%202:%20Aggregation%20images/AggregationVerifyOrdersMapReduce.png)
+![AggregationVerifyOrdersMapReduce](Experiment2-Aggregation/AggregationVerifyOrdersMapReduce.png)
 
 ## Additional Map-reduce operation developed by me
 
 I took inspiration from my part-time job, as I work as a sales associate at a jewelry store. 
 
-![AggregationJewelrySalesData](Experiment%202:%20Aggregation%20images/AggregationJewelrySalesData.png)
+![AggregationJewelrySalesData](Experiment2-Aggregation/AggregationJewelrySalesData.png)
 
 Map function:
 
-![AggregationMapFunction2](Experiment%202:%20Aggregation%20images/AggregationMapFunction2.png)
+![AggregationMapFunction2](Experiment2-Aggregation/AggregationMapFunction2.png)
 
 Reduce function:
 
-![AggregationReduceFunction2](Experiment%202:%20Aggregation%20images/AggregationReduceFunction2.png)
+![AggregationReduceFunction2](Experiment2-Aggregation/AggregationReduceFunction2.png)
 
 The results:
-
-![AggregationVerifyJewelryMapReduce](Experiment%202:%20Aggregation%20images/AggregationVerifyJewelryMapReduce.png)
+![AggregationVerifyJewelryMapReduce](Experiment2-Aggregation/AggregationVerifyJewelryMapReduce.png)
 
 In this output we can see the total sales revenue for each jewelry product category, such as `Earrings`, `Necklaces`, `Bracelets` and `Rings`. These results confirm that the Map-reduce operation has correctly aggregated and summarized the sales data for each jewelry product category in the `jewelrySalesData` collection. In this example, the Map-reduce function is useful because you can use it to get an overview over the sales data in a store, which can further be used in analysis of the store or for reporting purposes.
 
