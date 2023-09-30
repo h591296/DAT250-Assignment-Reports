@@ -8,11 +8,11 @@ https://github.com/h591296/DAT250-Spring-Counters-Todos.git
 
 I know it's not requried but here is a screenshot for the GET operation in Postman:
 
-![GET](GET.png)
+![GET](assets/GET.png)
 
 And here is a screenshot for the PUT and final GET operation in Postman:
 
-![PUTandGET](PUTandGET.png)
+![PUTandGET](assets/PUTandGET.png)
 
 ## Technical problems
 
